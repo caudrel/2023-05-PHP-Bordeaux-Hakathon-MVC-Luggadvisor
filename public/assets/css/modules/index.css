@@ -1,0 +1,16 @@
+
+.la-nav-container{
+    background-color: var(--bs-danger-bg-subtle);
+    height: 10vh;
+}
+
+
+
+.la-navTitle {
+    height: inherit;
+}
+
+.la-suitcase{
+    height: 10vh;
+    width: auto;
+}
