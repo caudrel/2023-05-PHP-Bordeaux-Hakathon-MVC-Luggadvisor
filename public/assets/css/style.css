@@ -1,3 +1,7 @@
 body {
     color: #f76c6c;
 }
+
+*{
+    background-color: var(--bs-success-bg-subtle);
+}
