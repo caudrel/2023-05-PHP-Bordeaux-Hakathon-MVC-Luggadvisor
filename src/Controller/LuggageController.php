@@ -9,4 +9,14 @@ class LuggageController extends AbstractController
     {
         return $this->twig->render('Luggage/index.html.twig');
     }
+
+    public function select()
+    {
+        return $this->twig->render('Luggage/select.html.twig');
+    }
+
+    public function result()
+    {
+        return $this->twig->render('Luggage/result.html.twig');
+    }
 }
