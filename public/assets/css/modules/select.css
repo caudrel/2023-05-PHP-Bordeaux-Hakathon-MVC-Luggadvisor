@@ -8,17 +8,21 @@
     text-align: center;
 }
 
-div.al-image-card img {
-    width: auto;
-    height: 10vh;
+.al-image-card img {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
 }
 
-.card:last-child{
-    margin-right: auto;
-    margin-left : 1.4rem;
-
-}
 
 .al-card-container {
-    max-height:350px;
+    height:170px;
+    width: 160px;
+    margin-bottom: 1rem
+}
+.card-title{
+    font-size: 13px;
+}
+.card-body{
+    height:50px !important;
 }
