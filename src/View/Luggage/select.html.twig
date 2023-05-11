@@ -10,9 +10,10 @@
             <h3>Vêtements</h3>
            {# {{ dump() }}#}
             <div class="d-flex flex-wrap justify-content-around">
+                <div class="d-flex flex-wrap justify-content-center mx-auto">
             {% for luggage in luggages %}
             {% if luggage.category == 'Vêtement' %}
-                <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
+                <div class="card al-card-container">
                     <div class="al-image-card">
                         <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
                     </div>
@@ -29,6 +30,7 @@
                 </div>
             {% endif %}
             {% endfor %}
+                </div>
             </div>
 
 
