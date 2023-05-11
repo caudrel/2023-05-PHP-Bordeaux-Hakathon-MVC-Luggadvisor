@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\LuggageManager;
 use App\Controller\WeatherController;
 
 class LuggageController extends AbstractController
@@ -15,7 +16,11 @@ class LuggageController extends AbstractController
 
     public function select()
     {
-        return $this->twig->render('Luggage/select.html.twig');
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $luggageManager = new LuggageManager();
+            $luggages = $luggageManager->selectByid();
+            return $this->twig->render('Luggage/select.html.twig', ['luggages' => $luggages]);
+        }
     }
 
     public function result(): string
@@ -25,10 +30,25 @@ class LuggageController extends AbstractController
         // the value of $city is to be changed for $_POST['city']
         $contents = $this->weatherController->getWeather($city);
 
-        return $this->twig->render('Luggage/result.html.twig', [
+        /* return $this->twig->render('Luggage/result.html.twig', [
             'contents' => [
                 'temp' => $contents['temp'],
             ]
-        ]);
+        ]);*/
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $luggageManager = new LuggageManager();
+            $luggages = $luggageManager->selectForLuggage();
+
+            return $this->twig->render('Luggage/result.html.twig', 
+               [
+              'luggages' => $luggages
+               ], 
+               [
+              'contents' => [
+                'temp' => $contents['temp'],]
+               ]
+            );
+        }
     }
 }

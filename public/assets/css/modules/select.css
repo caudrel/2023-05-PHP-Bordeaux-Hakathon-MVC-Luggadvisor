@@ -1,0 +1,28 @@
+.al-checkGreen:checked {
+    background-color: darkgreen;
+    border-color: darkgreen;
+
+}
+.al-image-card {
+    height: 10vh;
+    text-align: center;
+}
+
+.al-image-card img {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+}
+
+
+.al-card-container {
+    height:170px;
+    width: 160px;
+    margin-bottom: 1rem
+}
+.card-title{
+    font-size: 13px;
+}
+.card-body{
+    height:50px !important;
+}

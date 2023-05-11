@@ -2,10 +2,20 @@
 
 {% block content %}
 
-    <h2>le résultat</h2>
-    <p>Ne partez plus jamais en oubliant des choses dans votre valise !</p>
+    <h2>La valise idéale</h2>
+    <p>Dans la valide il y a :</p>
+{{ dump() }}
+    <ul>
+        {% for luggage in luggages %}
+        <li class="d-flex justify-content-start al-image-result">
+        <img class="al-image-result" src="/assets/images/{{ luggage.image }}" alt="dessin de {{ luggage.name }}">
+        <h3>{{ luggage.name }}</h3>
+        </li>
+        {% endfor %}
+    </ul>
 
-    <p>Et là le résultat</p>
+
+
 
     <h3>Un dernier tip avant votre départ...</h3>
     <p>Là où vous allez, il fait {{ contents.temp }} degrés !</p>
