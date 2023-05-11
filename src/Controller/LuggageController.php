@@ -14,9 +14,12 @@ class LuggageController extends AbstractController
 
     public function select()
     {
-        $langageManager = new LuggageManager();
-        $lugages = $langageManager->selectAll('category');
-        return $this->twig->render('Luggage/select.html.twig',['lugages' =>$lugages]);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $luggageManager = new LuggageManager();
+            $lugages = $luggageManager->selectByid();
+            return $this->twig->render('Luggage/select.html.twig', ['lugages' => $lugages]);
+        }
     }
 
     public function result()
