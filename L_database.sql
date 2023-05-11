@@ -2,6 +2,7 @@ CREATE DATABASE luggadvisor;
 
 use luggadvisor;
 
+
 create table item
 (
     id        int auto_increment
@@ -19,93 +20,93 @@ create table item
 );
 
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Pantalon', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Pantalon', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Short', 'vétement', 1, 1, 1, 0, 1, 1, 1);
+VALUES ('Short', 'Vêtement', 1, 1, 1, 0, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Jupe', 'vétement', 1, 1, 1, 0, 1, 1, 1);
+VALUES ('Jupe', 'Vêtement', 1, 1, 1, 0, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Robe', 'vétement', 1, 1, 1, 0, 1, 1, 1);
+VALUES ('Robe', 'Vêtement', 1, 1, 1, 0, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('T-shirt', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('T-shirt', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Pull', 'vétement', 1, 0, 1, 1, 0, 1, 1);
+VALUES ('Pull', 'Vêtement', 1, 0, 1, 1, 0, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Manteau', 'vétement', 1, 0, 1, 1, 0, 1, 1);
+VALUES ('Manteau', 'Vêtement', 1, 0, 1, 1, 0, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Sous-vétement', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Sous-vêtements', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Chausette', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Chausette', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Chaussure', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Chaussure', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Pyjama', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Pyjama', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Mayot de bain', 'vétement', 1, 1, 1, 0, 1, 1, 1);
+VALUES ('Maillot de bain', 'Vêtement', 1, 1, 1, 0, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Chemise', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Chemise', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Chapeau, casquette', 'vétement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Châpeau, casquette', 'Vêtement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Echarpe', 'vétement', 1, 1, 1, 1, 0, 1, 1);
+VALUES ('Echarpe', 'Vêtement', 1, 1, 1, 1, 0, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Gant', 'vétement', 1, 0, 1, 0, 1, 1, 1);
+VALUES ('Gants', 'Vêtement', 1, 0, 1, 0, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Imperméable', 'vétement', 1, 1, 1, 1, 0, 1, 1);
+VALUES ('Imperméable', 'Vêtement', 1, 1, 1, 1, 0, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Tong', 'vétement', 0, 1, 0, 0, 1, 1, 1);
+VALUES ('Tong', 'Vêtement', 0, 1, 0, 0, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Apres ski', 'équipement', 1, 0, 1, 1, 0, 1, 0);
+VALUES ('Apres ski', 'Equipement', 1, 0, 1, 1, 0, 1, 0);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Ski', 'équipement', 1, 0, 0, 1, 1, 1, 0);
+VALUES ('Ski', 'Equipement', 1, 0, 0, 1, 1, 1, 0);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Lunette de soleil', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Lunettes de soleil', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Gourde', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Gourde', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Casque', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Casque', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Vélo', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Vélo', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Chaussure de ski', 'équipement', 1, 0, 0, 1, 0, 1, 0);
+VALUES ('Chaussure de ski', 'Equipement', 1, 0, 0, 1, 0, 1, 0);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Jeux', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Jeux', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Serviette de plage', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Serviette de plage', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Parapluie', 'équipement', 1, 0, 1, 1, 0, 1, 1);
+VALUES ('Parapluie', 'Equipement', 1, 0, 1, 1, 0, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Tente', 'équipement', 1, 1, 1, 0, 1, 0, 1);
+VALUES ('Tente', 'Equipement', 1, 1, 1, 0, 1, 0, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Sac de couchage', 'équipement', 1, 1, 1, 0, 1, 0, 1);
+VALUES ('Sac de couchage', 'Equipement', 1, 1, 1, 0, 1, 0, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Matériel de camping', 'équipement', 1, 1, 1, 0, 1, 0, 1);
+VALUES ('Matériel de camping', 'Equipement', 1, 1, 1, 0, 1, 0, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Briquet', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Allumettes', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Boué canard', 'équipement', 0, 1, 0, 1, 1, 1, 1);
+VALUES ('Bouée canard', 'Equipement', 0, 1, 0, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Kit de secours', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Kit de secours', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('PQ', 'équipement', 1, 1, 1, 1, 1, 0, 1);
+VALUES ('PQ', 'Equipement', 1, 1, 1, 1, 1, 0, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Guide', 'équipement', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Carte', 'Equipement', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Lunette de soleil', 'équipement', 1, 1, 1, 0, 1, 1, 1);
+VALUES ('Lunette de soleil', 'Equipement', 1, 1, 1, 0, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Chargeur', 'electronique', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Chargeur', 'Electronique', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Liseuse', 'electronique', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Liseuse', 'Electronique', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Appareil photo', 'electronique', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Appareil photo', 'Electronique', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Batterie téléphone', 'electronique', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Batterie téléphone', 'Electronique', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Adaptateur', 'electronique', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Adaptateur', 'Electronique', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Ecouteur', 'electronique', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Ecouteur', 'Electronique', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Boules quies', 'electronique', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Boules quies', 'Electronique', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
 VALUES ('Serviette', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
@@ -127,8 +128,8 @@ VALUES ('Déodorant', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
 VALUES ('Bijoux', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Tampon', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Protection hygiénique', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
-VALUES ('Contraseption', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
+VALUES ('Contraception', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO item (item, category, mountain, beach, urban, smallTemp, hightTemp, hotel, extern)
 VALUES ('Médicament', 'Trousse de toilette', 1, 1, 1, 1, 1, 1, 1);
