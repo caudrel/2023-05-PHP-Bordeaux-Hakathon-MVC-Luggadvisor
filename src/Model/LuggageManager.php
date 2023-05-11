@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class LuggageManager
+class LuggageManager extends AbstractManager
 {
-
+    public const TABLE = 'item';
 }

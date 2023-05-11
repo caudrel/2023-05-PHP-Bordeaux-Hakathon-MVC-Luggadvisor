@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\LuggageManager;
+
 class LuggageController extends AbstractController
 {
 
@@ -12,7 +14,9 @@ class LuggageController extends AbstractController
 
     public function select()
     {
-        return $this->twig->render('Luggage/select.html.twig');
+        $langageManager = new LuggageManager();
+        $lugages = $langageManager->selectAll('category');
+        return $this->twig->render('Luggage/select.html.twig',['lugages' =>$lugages]);
     }
 
     public function result()

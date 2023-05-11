@@ -6,5 +6,10 @@
     <p>Ne partez plus jamais en oubliant des choses dans votre valise !</p>
 
     <p>Et là le form</p>
+        {% for lugage in lugages %}
+    <div class="d-flex justify-content-center">
+            <p class="pe-none">{{ lugage.item }}</p>
 
+    </div>
+        {% endfor %}
 {% endblock %}
