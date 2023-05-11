@@ -15,5 +15,5 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'luggage' => ['LuggageController', 'index',],
     'luggage/select' => ['LuggageController', 'select'],
-    'luggage/result' => ['LuggageController', 'result']
+    'luggage/result' => ['LuggageController', 'result'],
 ];
