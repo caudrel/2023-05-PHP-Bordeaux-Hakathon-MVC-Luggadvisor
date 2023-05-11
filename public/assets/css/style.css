@@ -1,7 +1,28 @@
 body {
     color: #f76c6c;
+    background-image: linear-gradient(var(--bs-success-bg-subtle), var(--bs-warning-bg-subtle));
+    height: 100vh;
 }
 
-*{
-    background-color: var(--bs-success-bg-subtle);
+.la-nav-container{
+    background-color: var(--bs-danger-bg-subtle);
+    position: sticky;
+    top: 0;
+}
+
+.la-nav-appName {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+}
+
+h2, p{
+    font-family: 'Montserrat', sans-serif;
 }
