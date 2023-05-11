@@ -3,8 +3,18 @@
 {% block content %}
 
     <h2>La valise idéale</h2>
-    <p>Votre valise !</p>
+    <p>Dans la valide il y a :</p>
+{{ dump() }}
+    <ul>
+        {% for luggage in luggages %}
+        <li class="d-flex justify-content-start al-image-result">
+        <img class="al-image-result" src="/assets/images/{{ luggage.image }}" alt="dessin de {{ luggage.name }}">
+        <h3>{{ luggage.name }}</h3>
+        </li>
+        {% endfor %}
+    </ul>
 
-    </div>
+
+
 
 {% endblock %}
