@@ -9,11 +9,13 @@
 
             <h3>Vêtements</h3>
            {# {{ dump() }}#}
+            <div class="d-flex flex-wrap justify-content-around">
             {% for luggage in luggages %}
             {% if luggage.category == 'Vêtement' %}
-            <div class="d-flex flex-wrap justify-content-around">
-                <div class="card" style="width: 10rem;">
-                    <img src="/assets/images/{{ luggage.image }}" class="card-img-top al-widthInherit" alt="dessin de {{ luggage.name }}">
+                <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
+                    <div class="al-image-card">
+                        <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
+                    </div>
                     <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                         <h5 class="card-title">{{ luggage.name }}</h5>
                         <div class="form-check">
@@ -25,25 +27,78 @@
                         </div>
                     </div>
                 </div>
-            </div>
             {% endif %}
             {% endfor %}
+            </div>
 
 
             <h3>Equipements</h3>
-            {% for item in items %}
-
-            {% endfor %}
-
+            <div class="d-flex flex-wrap justify-content-around ">
+                {% for luggage in luggages %}
+                    {% if luggage.category == 'Equipement' %}
+                        <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
+                            <div class="al-image-card">
+                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
+                            </div>
+                            <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                                <h5 class="card-title">{{ luggage.name }}</h5>
+                                <div class="form-check">
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                                           id="flexCheckDefault">
+                                    <label class="form-check-label" for="{{ luggage.name }}">
+                                        Ajouter
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
             <h3>Electronique</h3>
-            {% for item in items %}
-
-            {% endfor %}
-
+            <div class="d-flex flex-wrap justify-content-around ">
+                {% for luggage in luggages %}
+                    {% if luggage.category == 'Electronique' %}
+                        <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
+                            <div class="al-image-card">
+                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
+                            </div>
+                            <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                                <h5 class="card-title">{{ luggage.name }}</h5>
+                                <div class="form-check">
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                                           id="flexCheckDefault">
+                                    <label class="form-check-label" for="{{ luggage.name }}">
+                                        Ajouter
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
             <h3>Trousse de toilette</h3>
-            {% for item in items %}
+            <div class="d-flex flex-wrap justify-content-around ">
+                {% for luggage in luggages %}
+                    {% if luggage.category == 'Trousse de toilette' %}
 
-            {% endfor %}
+                        <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
+                            <div class="al-image-card">
+                            <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
+                            </div>
+                                <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                                <h5 class="card-title">{{ luggage.name }}</h5>
+                                <div class="form-check">
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                                           id="flexCheckDefault">
+                                    <label class="form-check-label" for="{{ luggage.name }}">
+                                        Ajouter
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
 
         </form>
     </div>
