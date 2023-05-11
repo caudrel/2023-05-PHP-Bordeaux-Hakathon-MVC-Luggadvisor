@@ -5,11 +5,51 @@
     <h2>La selection</h2>
     <p>Ne partez plus jamais en oubliant des choses dans votre valise !</p>
 
-    <p>Et là le form</p>
-        {% for lugage in lugages %}
-    <div class="d-flex justify-content-center">
-            <p class="pe-none">{{ lugage.item }}</p>
 
+    <div>
+        <form action="" method="post">
+
+            <h3>Vêtements</h3>
+            {% if item.category = "vêtement" %}
+            {% for item in items %}
+            <div class="d-flex flex-wrap justify-content-around">
+                <div class="card" style="width: 10rem;">
+                    <img src="/assets/images/{{ item.image }}" class="card-img-top al-widthInherit" alt="dessin de {{ item.name }}">
+                    <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <div class="form-check">
+                            <input name="{{ item.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                                   id="flexCheckDefault">
+                            <label class="form-check-label" for="{{ item.name }}">
+                                Ajouter
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+
+
+            <h3>Equipements</h3>
+            {% for item in items %}
+
+            {% endfor %}
+
+            <h3>Electronique</h3>
+            {% for item in items %}
+
+            {% endfor %}
+
+            <h3>Trousse de toilette</h3>
+            {% for item in items %}
+
+            {% endfor %}
+
+        </form>
     </div>
+
+
+
         {% endfor %}
 {% endblock %}

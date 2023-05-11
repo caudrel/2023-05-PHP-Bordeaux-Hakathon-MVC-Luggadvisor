@@ -1,0 +1,4 @@
+.al-checkGreen:checked {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
