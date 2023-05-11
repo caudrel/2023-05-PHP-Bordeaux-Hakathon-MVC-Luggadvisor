@@ -17,8 +17,8 @@ class LuggageController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $luggageManager = new LuggageManager();
-            $lugages = $luggageManager->selectByid();
-            return $this->twig->render('Luggage/select.html.twig', ['lugages' => $lugages]);
+            $luggages = $luggageManager->selectByid();
+            return $this->twig->render('Luggage/select.html.twig', ['luggages' => $luggages]);
         }
     }
 

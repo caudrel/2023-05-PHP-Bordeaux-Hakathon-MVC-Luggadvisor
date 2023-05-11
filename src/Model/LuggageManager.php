@@ -13,7 +13,7 @@ class LuggageManager extends AbstractManager
      */
     public function selectByid()
     {
-        $sql = "SELECT name, image FROM item
+        $sql = "SELECT name, image, category FROM item
                WHERE mountain = :mountain
                  AND beach = :beach
                  AND urban = :urban
