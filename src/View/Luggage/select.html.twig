@@ -5,24 +5,26 @@
     <h2>La selection</h2>
     <p>Ne partez plus jamais en oubliant des choses dans votre valise !</p>
     <div>
-        <form action="" method="post">
+        <form action="/luggage/result" method="post">
 
             <h3>Vêtements</h3>
-           {# {{ dump() }}#}
             <div class="d-flex flex-wrap justify-content-around">
                 <div class="d-flex flex-wrap justify-content-center mx-auto">
             {% for luggage in luggages %}
             {% if luggage.category == 'Vêtement' %}
-                <div class="card al-card-container">
+
+                <input type="hidden" name="id" value="{{ luggage.id }}">
+                <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
+
                     <div class="al-image-card">
                         <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
                     </div>
                     <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                         <h5 class="card-title">{{ luggage.name }}</h5>
                         <div class="form-check">
-                            <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                            <input name="name" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
                                    id="flexCheckDefault">
-                            <label class="form-check-label" for="{{ luggage.name }}">
+                            <label class="form-check-label" for="name">
                                 Ajouter
                             </label>
                         </div>
@@ -45,7 +47,7 @@
                             <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                                 <h5 class="card-title">{{ luggage.name }}</h5>
                                 <div class="form-check">
-                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
                                            id="flexCheckDefault">
                                     <label class="form-check-label" for="{{ luggage.name }}">
                                         Ajouter
@@ -67,7 +69,7 @@
                             <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                                 <h5 class="card-title">{{ luggage.name }}</h5>
                                 <div class="form-check">
-                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
                                            id="flexCheckDefault">
                                     <label class="form-check-label" for="{{ luggage.name }}">
                                         Ajouter
@@ -90,7 +92,7 @@
                                 <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                                 <h5 class="card-title">{{ luggage.name }}</h5>
                                 <div class="form-check">
-                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value=""
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
                                            id="flexCheckDefault">
                                     <label class="form-check-label" for="{{ luggage.name }}">
                                         Ajouter
@@ -101,6 +103,7 @@
                     {% endif %}
                 {% endfor %}
             </div>
+            <button type="submit" class="btn btn-success">C'est bon j'ai tout !</button>
 
         </form>
     </div>

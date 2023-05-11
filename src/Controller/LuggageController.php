@@ -6,7 +6,6 @@ use App\Model\LuggageManager;
 
 class LuggageController extends AbstractController
 {
-
     public function index()
     {
         return $this->twig->render('Luggage/index.html.twig');
@@ -15,7 +14,6 @@ class LuggageController extends AbstractController
     public function select()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
             $luggageManager = new LuggageManager();
             $luggages = $luggageManager->selectByid();
             return $this->twig->render('Luggage/select.html.twig', ['luggages' => $luggages]);
@@ -24,6 +22,11 @@ class LuggageController extends AbstractController
 
     public function result()
     {
-        return $this->twig->render('Luggage/result.html.twig');
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $luggageManager = new LuggageManager();
+            $luggages = $luggageManager->selectForLuggage();
+
+            return $this->twig->render('Luggage/result.html.twig', ['luggages' => $luggages]);
+        }
     }
 }

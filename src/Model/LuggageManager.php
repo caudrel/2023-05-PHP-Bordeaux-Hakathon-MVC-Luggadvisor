@@ -35,4 +35,17 @@ class LuggageManager extends AbstractManager
         return $stm->fetchAll();
     }
 
+    public function selectForLuggage()
+    {
+        $sql = "SELECT name, image, category FROM item
+               WHERE name = :name";
+
+
+        $stm = $this->pdo->prepare($sql);
+        $stm->bindValue('name', ':name', PDO::PARAM_STR);
+
+        $stm->execute();
+
+        return $stm->fetchAll();
+    }
 }
