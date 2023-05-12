@@ -1,5 +1,14 @@
 .al-image-result {
-    height: 5vh;
     width: auto;
     list-style-type: disc;
+}
+
+.al-image-result:last-child{
+display: none;
+}
+
+.lc-last-tip {
+    font-weight: bolder;
+    font-size: 3rem;
+
 }

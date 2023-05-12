@@ -70,18 +70,20 @@ class LuggageController extends AbstractController
 
     {
         $this->weatherController = new WeatherController();
-        $city = 'Paris';
+        $city = $_POST['city'];
         // the value of $city is to be changed for $_POST['city']
         $contents = $this->weatherController->getWeather($city);
-
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
           if(isset($_POST)){
-              $luggages = $_POST;
+
+              $luggages = $_POST ;
 
           }
         }
-            return $this->twig->render('Luggage/result.html.twig', ['luggages' => $luggages,'contents' => ['temp' => $contents['temp'],]]);
+            return $this->twig->render('Luggage/result.html.twig', ['luggages' => $luggages,'contents' => ['temp' => $contents['temp'],
+                                                                                                                'min_temp' => $contents['min_temp'],
+                                                                                                                'max_temp' => $contents['max_temp']]]);
     }
 }

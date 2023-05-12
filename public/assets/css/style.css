@@ -1,5 +1,6 @@
 @import "modules/index.css";
 @import "modules/select.css";
+@import "modules/result.css";
 
 body {
     background-image: linear-gradient(var(--bs-success-bg-subtle), var(--bs-warning-bg-subtle));
