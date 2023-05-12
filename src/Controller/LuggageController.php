@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Model\LuggageManager;
-/*use function Symfony\Component\DependencyInjection\Loader\Configurator\inline_service;*/
+use function Symfony\Component\DependencyInjection\Loader\Configurator\inline_service;
 use App\Controller\WeatherController;
 
 
@@ -74,13 +74,14 @@ class LuggageController extends AbstractController
         // the value of $city is to be changed for $_POST['city']
         $contents = $this->weatherController->getWeather($city);
 
-  
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
           if(isset($_POST)){
               $luggages = $_POST;
+
           }
         }
-            return $this->twig->render('Luggage/result.html.twig', ['luggages' => $luggages],['contents' => ['temp' => $contents['temp'],]]);
+            return $this->twig->render('Luggage/result.html.twig', ['luggages' => $luggages,'contents' => ['temp' => $contents['temp'],]]);
     }
 }
