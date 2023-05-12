@@ -1,49 +1,57 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-
-    <h2>La selection</h2>
-    <p>Ne partez plus jamais en oubliant des choses dans votre valise !</p>
+    <div class="Ld_btn">
+        <h2>La selection</h2>
+        <p>Ne partez plus jamais en oubliant des choses dans votre valise !</p>
+    </div>
     <div>
         <form action="/luggage/result" method="post">
 
-            <h3>Vêtements</h3>
+            <h3 class="Ld_btn">Vêtements</h3>
+
             <div class="d-flex flex-wrap justify-content-around">
-                <div class="d-flex flex-wrap justify-content-center mx-auto">
-            {% for luggage in luggages %}
-            {% if luggage.category == 'Vêtement' %}
-                <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
-                    <div class="al-image-card">
-                        <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
-                    </div>
-                    <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
-                        <h5 class="card-title">{{ luggage.name }}</h5>
-                        <div class="form-check">
-                            <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
-                                   id="flexCheckDefault">
-                            <label class="form-check-label" for="{{ luggage.name }}">
-                                Ajouter
-                            </label>
+                {% for luggage in luggages %}
+                    {% if luggage.category == 'Vêtement' %}
+                        <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
+                            <div class="al-image-card">
+                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top"
+                                     alt="dessin de {{ luggage.name }}">
+                            </div>
+                            <div
+                                class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                                <h5 class="card-title">{{ luggage.name }}</h5>
+                                <div class="form-check">
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen"
+                                           type="checkbox" value="{{ luggage.name }}"
+                                           id="flexCheckDefault">
+                                    <label class="form-check-label" for="{{ luggage.name }}">
+                                        Ajouter
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            {% endif %}
-            {% endfor %}
-                </div>
+                    {% endif %}
+                {% endfor %}
             </div>
 
-            <h3>Equipements</h3>
+
+            <h3 class="Ld_btn">Equipements</h3>
             <div class="d-flex flex-wrap justify-content-around ">
                 {% for luggage in luggages %}
                     {% if luggage.category == 'Equipement' %}
                         <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
                             <div class="al-image-card">
-                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
+                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top"
+                                     alt="dessin de {{ luggage.name }}">
                             </div>
-                            <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                            <div
+                                class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                                 <h5 class="card-title">{{ luggage.name }}</h5>
                                 <div class="form-check">
-                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen"
+                                           type="checkbox"
+                                           value="{{ luggage.name }}"
                                            id="flexCheckDefault">
                                     <label class="form-check-label" for="{{ luggage.name }}">
                                         Ajouter
@@ -54,18 +62,22 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <h3>Electronique</h3>
+            <h3 class="Ld_btn">Electronique</h3>
             <div class="d-flex flex-wrap justify-content-around ">
                 {% for luggage in luggages %}
                     {% if luggage.category == 'Electronique' %}
                         <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
                             <div class="al-image-card">
-                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
+                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top"
+                                     alt="dessin de {{ luggage.name }}">
                             </div>
-                            <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                            <div
+                                class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                                 <h5 class="card-title">{{ luggage.name }}</h5>
                                 <div class="form-check">
-                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen"
+                                           type="checkbox"
+                                           value="{{ luggage.name }}"
                                            id="flexCheckDefault">
                                     <label class="form-check-label" for="{{ luggage.name }}">
                                         Ajouter
@@ -76,19 +88,23 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <h3>Trousse de toilette</h3>
+            <h3 class="Ld_btn">Trousse de toilette</h3>
             <div class="d-flex flex-wrap justify-content-around ">
                 {% for luggage in luggages %}
                     {% if luggage.category == 'Trousse de toilette' %}
 
                         <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
                             <div class="al-image-card">
-                            <img src="/assets/images/{{ luggage.image }}" class="card-img-top" alt="dessin de {{ luggage.name }}">
+                                <img src="/assets/images/{{ luggage.image }}" class="card-img-top"
+                                     alt="dessin de {{ luggage.name }}">
                             </div>
-                                <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
+                            <div
+                                class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                                 <h5 class="card-title">{{ luggage.name }}</h5>
                                 <div class="form-check">
-                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
+                                    <input name="{{ luggage.name }}" class="form-check-input al-checkGreen"
+                                           type="checkbox"
+                                           value="{{ luggage.name }}"
                                            id="flexCheckDefault">
                                     <label class="form-check-label" for="{{ luggage.name }}">
                                         Ajouter
@@ -99,13 +115,11 @@
                     {% endif %}
                 {% endfor %}
             </div>
-
-
-                <div>
-                    <label for="city">Au fait on va dans quelle ville ?</label>
-                    <input type="text" name="city" id="city">
-                </div>
-            <button type="submit" class="btn btn-success">C'est bon j'ai tout !</button>
+            <div class="Ld_btn">
+                <label class="form-label" for="city">Au fait on va dans quelle ville ?</label>
+                <input class="form-control" type="text" name="city" id="city">
+            </div>
+            <button type="submit" class="btn btn-success d-flex mx-auto mb-3">C'est bon j'ai tout !</button>
         </form>
     </div>
 

@@ -4,7 +4,7 @@
 
 body {
     background-image: linear-gradient(var(--bs-success-bg-subtle), var(--bs-warning-bg-subtle));
-    height: 100vh;
+    height: 100%;
 }
 
 h1, h2, h3, h4 {
