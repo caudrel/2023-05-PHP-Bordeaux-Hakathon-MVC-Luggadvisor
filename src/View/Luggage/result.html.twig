@@ -1,23 +1,27 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h2>La valise idéale</h2>
-    <p>Dans la valise il y a :</p>
-    <ul>
-        {% for luggage in luggages %}
-        <li class="al-image-result">
-        {{ luggage}}
-        </li>
-        {% endfor %}
-    </ul>
-    <p>
-        <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Un dernier tip avant votre départ...
-        </button>
-    </p>
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            <p><span class="lc-last-tip"> A {{ luggages.city }}, il fait {{ contents.temp }} degrés ! </span> ☀️ (Min : {{ contents.min_temp }}° / Max : {{ contents.max_temp }}°)</p>
+    <div class="Ld_btn ld_result">
+        <h2>La valise idéale</h2>
+        <p>Dans la valise il y a :</p>
+        <ul>
+            {% for luggage in luggages %}
+                <li class="al-image-result">
+                    {{ luggage }}
+                </li>
+            {% endfor %}
+        </ul>
+        <p>
+            <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Un dernier tip avant votre départ...
+            </button>
+        </p>
+        <div class="collapse ld_card" id="collapseExample">
+            <div class="card card-body ld_card mx-auto">
+                <p><span class="lc-last-tip"> A {{ luggages.city }}, il fait {{ contents.temp }} degrés ! </span> ☀️</p>
+                <p>(Min : {{ contents.min_temp }}° / Max : {{ contents.max_temp }}°)</p>
             </div>
+        </div>
     </div>
 {% endblock %}
