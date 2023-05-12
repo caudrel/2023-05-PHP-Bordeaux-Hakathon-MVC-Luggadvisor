@@ -1,4 +1,5 @@
 .al-image-result {
     height: 5vh;
     width: auto;
+    list-style-type: disc;
 }

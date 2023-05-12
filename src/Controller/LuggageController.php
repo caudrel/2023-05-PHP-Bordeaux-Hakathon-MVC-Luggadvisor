@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\LuggageManager;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\inline_service;
 
 class LuggageController extends AbstractController
 {
@@ -13,20 +14,61 @@ class LuggageController extends AbstractController
 
     public function select()
     {
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $luggageManager = new LuggageManager();
-            $luggages = $luggageManager->selectByid();
-            return $this->twig->render('Luggage/select.html.twig', ['luggages' => $luggages]);
+            if (isset($_POST['mountain']) && isset($_POST['warm']) && isset($_POST['room'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByMwr();
+
+            } elseif (isset($_POST['mountain']) && isset($_POST['warm']) && isset($_POST['outside'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByMwo();
+
+            } elseif (isset($_POST['mountain']) && isset($_POST['cold']) && isset($_POST['outside'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByMco();
+
+            } elseif (isset($_POST['mountain']) && isset($_POST['cold']) && isset($_POST['room'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByMcr();
+            }elseif (isset($_POST['beach']) && isset($_POST['cold']) && isset($_POST['room'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByBcr();
+            }elseif (isset($_POST['beach']) && isset($_POST['warm']) && isset($_POST['outside'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByBwo();
+            }elseif (isset($_POST['beach']) && isset($_POST['cold']) && isset($_POST['outside'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByBco();
+            }elseif (isset($_POST['beach']) && isset($_POST['warm']) && isset($_POST['room'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByBwr();
+            }elseif (isset($_POST['urban']) && isset($_POST['warm']) && isset($_POST['room'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByUwr();
+            }elseif (isset($_POST['urban']) && isset($_POST['warm']) && isset($_POST['outside'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByUwo();
+            }elseif (isset($_POST['urban']) && isset($_POST['cold']) && isset($_POST['outside'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByUco();
+            }elseif (isset($_POST['urban']) && isset($_POST['cold']) && isset($_POST['room'])) {
+                $luggageManager = new LuggageManager();
+                $luggages = $luggageManager->selectByUcr();
+            }
         }
+            return $this->twig->render('Luggage/select.html.twig', ['luggages' => $luggages]);
     }
 
-    public function result()
+
+    public function result() : string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $luggageManager = new LuggageManager();
-            $luggages = $luggageManager->selectForLuggage();
 
-            return $this->twig->render('Luggage/result.html.twig', ['luggages' => $luggages]);
+          if(isset($_POST)){
+              $luggages = $_POST;
+          }
         }
+            return $this->twig->render('Luggage/result.html.twig', ['luggages' => $luggages]);
     }
 }

@@ -13,7 +13,6 @@
             {% for luggage in luggages %}
             {% if luggage.category == 'Vêtement' %}
 
-                <input type="hidden" name="id" value="{{ luggage.id }}">
                 <div class="card al-card-container" style="width: 10rem; margin-bottom: 1rem;">
 
                     <div class="al-image-card">
@@ -22,7 +21,7 @@
                     <div class="card-body pt-1 pb-0 d-flex flex-column justify-content-between align-items-start">
                         <h5 class="card-title">{{ luggage.name }}</h5>
                         <div class="form-check">
-                            <input name="name" class="form-check-input al-checkGreen" type="checkbox" value="{{ luggage.name }}"
+                            <input name="name" class="form-check-input al-checkGreen" type="checkbox" value=""
                                    id="flexCheckDefault">
                             <label class="form-check-label" for="name">
                                 Ajouter
@@ -34,7 +33,6 @@
             {% endfor %}
                 </div>
             </div>
-
 
             <h3>Equipements</h3>
             <div class="d-flex flex-wrap justify-content-around ">
