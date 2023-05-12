@@ -1,8 +1,8 @@
 .al-checkGreen:checked {
     background-color: darkgreen;
     border-color: darkgreen;
-
 }
+
 .al-image-card {
     height: 10vh;
     text-align: center;
