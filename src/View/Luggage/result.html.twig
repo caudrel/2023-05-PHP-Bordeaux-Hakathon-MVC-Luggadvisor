@@ -10,7 +10,14 @@
         </li>
         {% endfor %}
     </ul>
-
-    <h3>Un dernier tip avant votre départ...</h3>
-    <p>Là où vous allez, il fait {{ contents.temp }} degrés !</p>
+    <p>
+        <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Un dernier tip avant votre départ...
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <p><span class="lc-last-tip"> A {{ luggages.city }}, il fait {{ contents.temp }} degrés ! </span> ☀️ (Min : {{ contents.min_temp }}° / Max : {{ contents.max_temp }}°)</p>
+            </div>
+    </div>
 {% endblock %}
