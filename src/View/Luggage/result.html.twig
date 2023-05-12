@@ -1,24 +1,16 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-
     <h2>La valise idéale</h2>
-    <p>Dans la valide il y a :</p>
-{{ dump() }}
+    <p>Dans la valise il y a :</p>
     <ul>
         {% for luggage in luggages %}
-        <li class="d-flex justify-content-start al-image-result">
-        <img class="al-image-result" src="/assets/images/{{ luggage.image }}" alt="dessin de {{ luggage.name }}">
-        <h3>{{ luggage.name }}</h3>
+        <li class="al-image-result">
+        {{ luggage}}
         </li>
         {% endfor %}
     </ul>
 
-
-
-
     <h3>Un dernier tip avant votre départ...</h3>
     <p>Là où vous allez, il fait {{ contents.temp }} degrés !</p>
-
-
 {% endblock %}
