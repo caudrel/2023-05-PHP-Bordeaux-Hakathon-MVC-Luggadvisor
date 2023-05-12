@@ -1,10 +1,13 @@
+.lg-container-index {
+    margin: 0 10vw;
+}
 
 .la-nav-container{
+    background-image: url("/../../../assets/images/landscape1.webp");
+    background-position: 75% 25%;
     background-color: var(--bs-danger-bg-subtle);
     height: 10vh;
 }
-
-
 
 .la-navTitle {
     height: inherit;
@@ -13,4 +16,50 @@
 .la-suitcase{
     height: 10vh;
     width: auto;
+}
+.messagedefilant {
+    display: block;
+    margin: 3vh 0 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    height: 10vh;
+}
+
+.messagedefilant div {
+    position: absolute;
+    min-width: 100%;
+}
+
+.messagedefilant div:after {
+    position: absolute;
+    top:0; left:0;
+    content:attr(data-text);
+    animation: defilement2 10s infinite linear;
+    background: #edc;
+}
+
+.messagedefilant div span,
+.messagedefilant div:after {
+    position: relative;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-family: Grand Hotel, cursive;
+    white-space: nowrap;
+    top:0;
+}
+
+.messagedefilant div span {
+    animation: defilement 20s infinite linear;
+}
+
+@keyframes defilement {
+    0% { margin-left: 0; }
+    100% { margin-left: -100%; }
+}
+@keyframes defilement2 {
+    0% { margin-left: 100%; }
+    100% { margin-left: 0%; }
 }

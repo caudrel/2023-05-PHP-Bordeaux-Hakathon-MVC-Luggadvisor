@@ -3,17 +3,39 @@
 
 body {
     background-image: linear-gradient(var(--bs-success-bg-subtle), var(--bs-warning-bg-subtle));
-    height: 100%;
+    height: 100vh;
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-family: 'Caveat', cursive;
 }
 
-h2, p{
-    font-family: 'Montserrat', sans-serif;
+h1 {
+    font-size: 2.5rem;
 }
 
-h5 {
-    font-size: 1em;
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 3vh;
+}
+
+p {
+    font-family: 'Droid Serif', serif;
+    font-size: 1.2rem;
+}
+
+* {
+    color: rgb(42, 80, 2);
+}
+
+button {
+    margin: 5vh 0;
+}
+
+.la-lolo {
+    color: rgb(255, 212, 166);
 }
