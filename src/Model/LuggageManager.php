@@ -8,6 +8,11 @@ class LuggageManager extends AbstractManager
 {
     public const TABLE = 'item';
 
+    // 12 queries have been done to address the needs
+    // 12 'selectBy' followed by 3 letters
+    // 1st letter is either B for Beach, M for mountain, U for Urban/city
+    // 2nd letter is either C for cold, w for warm
+    // 3rd letter is either r for room, o for outside
     /**
      * @return array|false
      */
